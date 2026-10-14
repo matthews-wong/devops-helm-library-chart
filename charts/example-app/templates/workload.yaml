@@ -1,0 +1,3 @@
+{{ include "lib-common.deployment" . }}
+---
+{{ include "lib-common.service" . }}
