@@ -1,0 +1,5 @@
+apiVersion: v2
+name: lib-common
+description: Shared hardened defaults for workload charts
+type: library
+version: 0.1.0
