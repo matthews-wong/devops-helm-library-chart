@@ -1,0 +1,25 @@
+replicaCount: 2
+component: web
+partOf: example
+runAsUser: 10001
+
+image:
+  repository: nginxinc/nginx-unprivileged
+  tag: "1.27.2"
+  pullPolicy: IfNotPresent
+
+containerPort: 8080
+
+service:
+  port: 80
+
+probes:
+  path: /
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+  limits:
+    cpu: 200m
+    memory: 128Mi
